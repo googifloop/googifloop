@@ -1,4 +1,4 @@
-            - name: deploy2nekoweb
+            - name: googifloop.nekoweb
   # You may pin to the exact commit or the version.
   # uses: indiefellas/deploy2nekoweb@143fee495be60339b53595023bab68794ca535fa
   uses: indiefellas/deploy2nekoweb@v1.0.1
