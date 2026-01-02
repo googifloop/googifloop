@@ -2,7 +2,7 @@
     <head>
         <title>Character Name</title>
 		<link rel="stylesheet" href="/style.css">
-		<!-- <link rel="stylesheet" href="resources/index.css"> -->
+		<!-- <link rel="stylesheet" href="/resources/css/index.css"> -->
         <link rel="icon" type="image/x-icon" href="/favicon.png">    
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -210,13 +210,14 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- For some reason, you CANNOT have this in the head. -->
+            <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+            <script>
+                Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+                });
+            </script>
         </div>
-        <!-- For some reason, you CANNOT have this in the head. -->
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
-        <script>
-            Fancybox.bind("[data-fancybox]", {
-            // Your custom options
-            });
-        </script>
 	</body>
 </html>
