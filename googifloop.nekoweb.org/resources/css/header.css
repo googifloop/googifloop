@@ -1,0 +1,96 @@
+/* navbar stuff */
+
+.navBarMain {
+    width: calc(100%+1.25rem);
+    height: 2.5rem;
+    background-image: linear-gradient(to bottom, #fcfcfc, #e5eff9 50%, #dce6f4 50%, #dce8f6);
+    filter: drop-shadow(0 0.05rem 0.25rem rgba(26,34,71,1));
+    margin: -1.25rem;
+    margin-bottom: 0;
+
+    animation-name: moveUp;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+
+.navBarFlex {
+    display: flex;
+    margin: 0 0.5rem;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    gap: 0.25rem;
+    justify-content: flex-end;
+}
+
+.navbutton {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    color: #1a2247;
+    filter: drop-shadow(0 0.1rem 0.05rem rgba(0,0,0,0.5));
+    text-decoration: none;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.navBig {
+    display: inline-block;
+}
+
+.navSpecial {
+    display: inline-block;
+}
+
+.navSmall {
+    display: none;
+}
+
+.bigasslogo {
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 62rem) {
+    .navBig {
+    display: none;
+    }
+    .navSmall {
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 48.5rem) {
+    .bigasslogo {
+    display: none;
+    }
+    .navBarFlex {
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width: 31.25rem) {
+    .navSmall {
+        display: none;
+    }
+    .navSpecial {
+        display: none;
+    }
+}
+
+.navbutton img {
+    height: 2rem;
+    object-fit: contain;
+}
+
+.navbutton:hover {
+    transform: scale(1.1);
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(-4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

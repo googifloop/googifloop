@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>credits!</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="resources/css/credits.css">
+        <link rel="icon" type="image/x-icon" href="resources/img/main/favicon.png">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<script src="https://unpkg.com/swup@4"></script>
+		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script>
+			const swup = new Swup({
+				plugins: [new SwupHeadPlugin()]
+			});
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+			$(document).ready(function(){
+				$('#headerContainer').load('/header.html');
+			});
+		</script>
+		<div id="headerContainer"></div>
+	</head>
+
+	<body>
+        <div class="transition-slide" id="swup">
+            <div class="wavey">
+                <p style="color: white;">credits lol</p>
+            </div>
+
+            <ul style="color: white; list-style-type: none;">
+                <li><a href="https://fancyapps.com/fancybox/">fancybox</a> (gallery library)</li>
+                <li><a href="https://nekoweb.org">nekoweb</a> (awesome website host!!)</li>
+                <li>Swup (awesome page transition site)</li>
+                <p style="color: white;">and more to come yayy</p>
+            </ul>
+
+            <br>
+
+            <div class="wavey">
+                <p style="color: white;">special thanks</p>
+            </div>
+
+            <ul style="color: white; list-style-type: none;">
+                <li><a href="https://32enoki.net/">32enoki</a> (inspired me to continue working on my website and learn a bit more HTML and whatnot) (also swag musician and person Check them out pls)</li>
+                <li>myself (im awesome)</li>
+            </ul>
+
+            <!-- For some reason, you CANNOT have this in the head. -->
+            <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+            <script>
+                Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+                });
+            </script>  
+        </div>
+    </body>
+</html>

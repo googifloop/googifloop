@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <title>sora's exhibitions</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="/resources/css/exhibitions.css">
+        <link rel="icon" type="image/x-icon" href="/favicon.png">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<script src="https://unpkg.com/swup@4"></script>
+		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script>
+			const swup = new Swup({
+				plugins: [new SwupHeadPlugin()]
+			});
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+			$(document).ready(function(){
+				$('#headerContainer').load('/header.html');
+			});
+		</script>
+		<div id="headerContainer"></div>
+	</head>
+
+    <body>
+        <div class="transition-slide" id="swup">
+            <div class="main">
+            <h1 style="line-height: 0.2;">Exhibitions</h1>
+            <p style="letter-spacing: 3px;">what would you like to look at?</p>
+                <!-- ocs section -->
+                <details style="text-align: center;font-size: 200%;">
+                    <summary>OCs</summary>
+
+                    <div class="carouselMain">
+                        <div class="ocCarousel">
+                            <!-- template here -->
+                            <!-- <div class="ocCard" style="--hover-color: #FFFFFF;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>place the holder</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div> -->
+
+                            <div class="ocCard" style="--hover-color: #3158bb;">
+                                <a href="characters/sw1tch.html">
+                                    <div class="cardBG">
+                                        <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/carouselSW1TCH.png">
+                                        <p>SWITCH</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Music -->
+                <details style="text-align: center;font-size: 200%;">
+                    <summary>Music</summary>
+                    <p><a href="https://drive.google.com/drive/folders/1l8tdDdKNiLRPPvtR5RIkXCyFrj2JZQtV?usp=sharing">All my songs in a downloadable format</a>, or if you'd like to skim through them, an audio player!</p>
+                    <script>
+                        function show(param_div_id) {
+                            document.getElementById('columnR').innerHTML = document.getElementById(param_div_id).innerHTML;
+                        }
+                    </script>
+
+                    <h1>please click on an album, EP, or single to listen!!</h1>
+
+                    <div class="row">
+                        <div class="column columnL">
+                            <div class="artworkPreview">
+                                <img src="resources/img/site/exhibitions/cover424.png" class="albumCoverImg" onclick="show('424')"></img>
+                            </div>
+                            <div class="artworkPreview">
+                                <img src="resources/img/site/exhibitions/cover2Time.png" class="albumCoverImg" onclick="show('2Time')"></img>
+                            </div>
+                            <div class="artworkPreview">
+                                <img src="resources/img/site/exhibitions/coverOoSM.png" class="albumCoverImg" onclick="show('OoSM')"></img>
+                            </div>
+                            <div class="artworkPreview">
+                                <img src="resources/img/site/exhibitions/cover11.jpg" class="albumCoverImg" onclick="show('11')"></img>
+                            </div>
+                            <div class="artworkPreview">
+                                <img src="resources/img/site/exhibitions/coverGSFM.png" class="albumCoverImg" onclick="show('GSFM')"></img>
+                            </div>
+                            <div class="artworkPreview">
+                                <img src="resources/img/site/exhibitions/coverSynPlay.jpg" class="albumCoverImg" onclick="show('SynPlay')"></img>
+                            </div>
+                        </div>
+                        <div class="column columnR" id="columnR">
+                            <p>swag, but in the other column</p>
+                        </div>
+
+                        <div id="424" style="display:none;">
+                                <iframe style="border: 0; width: 100%; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1614487798/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/4-24-2024-4-24-24">4-24-2024-4-24-24 by googifloop</a></iframe>
+                            </div>
+                            <div id="2Time" style="display:none;">
+                                <iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3041830216/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/track/veil-of-allegiance">Veil Of Allegiance by googifloop</a></iframe>
+                            </div>
+                            <div id="OoSM" style="display:none;">
+                                <iframe style="border: 0; width: 100%; height: 654px;" src="https://bandcamp.com/EmbeddedPlayer/album=3902365542/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/one-of-saturns-moons">One of Saturn&#39;s Moons by googifloop</a></iframe>
+                            </div>
+                            <div id="11" style="display:none;">
+                                <iframe style="border: 0; width: 100%; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=2071343630/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/eleven-eleven">ELEVEN ELEVEN by googifloop</a></iframe>
+                            </div>
+                            <div id="GSFM" style="display:none;">
+                                <iframe style="border: 0; width: 100%; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=1729539897/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/googifloops-silly-funky-mod-volume-1">googifloop&#39;s silly funky mod: Volume 1 by googifloop</a></iframe>
+                            </div>
+                            <div id="SynPlay" style="display:none;">
+                                <iframe style="border: 0; width: 100%; height: 522px;" src="https://bandcamp.com/EmbeddedPlayer/album=2495322117/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/synthetic-playmate">Synthetic Playmate by googifloop</a></iframe>
+                            </div>
+                    </div>
+                </details>
+
+                <!-- Stems -->
+                <details style="text-align: center;font-size: 200%;">
+                    <summary>Stems & Project Files</summary>
+                    <p>Also heads up, some of these stems might be TOO LOUD and will clip. This is because these are separated stems, and sometimes I rely on limiting and compressing during the mastering to lessen the sound.</p>
+                    <p><i>Some of these tracks won't sound exactly the same due to mastering.</i></p>
+
+                    <!-- 4-24 time -->
+                    <details style="text-align: center;font-size: 75%;">
+                        <summary style="
+                            color: #FBCB40;background-color: #222222;
+                            border-radius: 20px;
+                            padding: 5px;
+                            margin: 5px;
+                            ">4-24-2024-4-24-24</summary>
+                        <p>Notes:</p>
+                        <ul>
+                            <li>blanket.flp has certain instruments that should be sidechained to a vocoder, but for the sake of stems, they have been unsidechained so you can hear them in their full synthetic glory :]</li>
+                            <li>slacking is very boring without the samples stem.</li>
+                            <li>DO NOT PLAY WISTFUL 0825 AT 3 AM!!!</li>
+                        </ul>
+                        <a href="https://app.box.com/s/sac4vjowanjby00qicocvyqhyuu7kedt">download all stems</a><br>
+                        <a href="https://app.box.com/s/bs01rfjbxbuujgsj1m9l08d9sh03tewh">blanket</a><br>
+                        <a href="https://app.box.com/s/fvbuh8l99n2v2j4rwiz7ba2u8n42xf0u">can i be cool too</a><br>
+                        <a href="https://app.box.com/s/6sdrk5a9rtmsy9vtve40ox02sagu57gb">I WANNA B COOL AND APPROACHABLE!</a><br>
+                        <a href="https://app.box.com/s/zjsgme4cpmvuu9yzpor9w4ba112fb93n">keybaaa222</a><br>
+                        <a href="https://app.box.com/s/ig7jxhw22uo1tabfsnyzkro3ssugseqy">professor nekoshow ahh beat</a><br>
+                        <a href="https://app.box.com/s/qi2wm5yay3ms2wch4j3z5z2v0e1iqg02">syxx</a><br>
+                        <a href="https://app.box.com/s/3kag5hzssexzp58z8yopgt7cu5u5q4td">slacking</a><br>
+                        <a href="https://app.box.com/s/okkw3ctdkgk3zgxw4m8d1j35zx370de7">wistful 0825</a><br>
+                    </details>
+
+                    <!-- Two Time's Impish Delights (soon) -->
+                    <details style="text-align: center;font-size: 75%; filter:blur(0.1rem)">
+                        <summary style="
+                            color: #FFFFFF;
+                            text-shadow: 1px 1px 0 #000000;
+                            background-image: linear-gradient(
+                                #AAAAAA,
+                                #333333
+                            );
+                            border-radius: 20px;
+                            padding: 5px;
+                            margin: 5px;
+                            ">Two Time's Impish Delights</summary>
+                        <p>Notes:</p>
+                        <ul>
+                            <li>Unfortunately, coming soon :C. I'm currently on vacation, so expect these to be out soon !!</li>
+                        </ul>
+                        <a href="https://youtu.be/dQw4w9WgXcQ">Songs will be here eventually.</a>
+                    </details>
+
+                    <!-- One of Saturn's Moons (soon) -->
+                    <details style="text-align: center;font-size: 75%; filter:blur(0.1rem)">
+                        <summary style="
+                            color: #FFFFFF;
+                            text-shadow: 1px 1px 0 #000000;
+                            background-image: linear-gradient(
+                                #AAAAAA,
+                                #333333
+                            );
+                            border-radius: 20px;
+                            padding: 5px;
+                            margin: 5px;
+                            ">One of Saturn's Moons</summary>
+                        <p>Notes:</p>
+                        <ul>
+                            <li>Unfortunately, coming soon :C. I'm currently on vacation, so expect these to be out soon !!</li>
+                        </ul>
+                        <a href="https://youtu.be/dQw4w9WgXcQ">Songs will be here eventually.</a>
+                    </details>
+
+                    <!-- 11-11 time -->
+                    <details style="text-align: center;font-size: 75%;">
+                        <summary style="
+                            color: white;
+                            text-shadow: 1px 1px 0 #3D5463;
+                            background-image: linear-gradient(to bottom,
+                                #66D0E0,
+                                #3898E5
+                            );
+                            border-radius: 20px;
+                            padding: 5px;
+                            margin: 5px;
+                            ">ELEVEN ELEVEN</summary>
+                        <p>Notes:</p>
+                        <ul>
+                            <li>Some stems have samples that don't belong in said stem. To be completely honest... I don't know why I didn't put the blanket.flp sample in oh! so blue_Synths.wav but oh well. shrug</li>
+                            <li>Lmnop has drums that I forgot to unmute during the official release... whoops (Correction this is now outdated, as I uploaded the corrected version as of recent!)</li>
+                        </ul>
+                        <a href="https://app.box.com/s/dyjqll9eey1g1iiwufmen42iiw8zkb77">Download all stems</a><br>
+                        <a href="https://app.box.com/s/igc3a4xiqi6h7jxnfpz3nmv4pknounob">oh! so blue</a><br>
+                        <a href="https://app.box.com/s/2nr9wjlh48wwjpnnydttsec8ll1sj5og">Tussle Russle</a><br>
+                        <a href="https://app.box.com/s/nj491ynd77dj9koybw0yprtv5skcgxs5">Lmnop</a><br>
+                        <a href="https://app.box.com/s/its2v9pw553qtyz29mlnehwmapizqr40">Radiotelephony</a><br>
+                        <a href="https://app.box.com/s/1ez7kbjvtzs67oa93jl84t0k2wtnn7b1">FIFTEEN / TWO</a><br>
+                    </details>
+
+                    <!-- googifloop's silly funky mod (soon) -->
+                    <details style="text-align: center;font-size: 75%; filter:blur(0.1rem)">
+                        <summary style="
+                            color: #FFFFFF;
+                            text-shadow: 1px 1px 0 #000000;
+                            background-image: linear-gradient(
+                                #AAAAAA,
+                                #333333
+                            );
+                            border-radius: 20px;
+                            padding: 5px;
+                            margin: 5px;
+                            ">googifloop's silly funky mod</summary>
+                        <p>Notes:</p>
+                        <ul>
+                            <li>Unfortunately, coming soon :C. I'm currently on vacation, so expect these to be out soon !!</li>
+                        </ul>
+                        <a href="https://youtu.be/dQw4w9WgXcQ">Songs will be here eventually.</a>
+                    </details>
+
+                    <!-- Synthetic Playmate -->
+                    <details style="text-align: center;font-size: 75%;">
+                        <summary style="
+                            color: #7F3D23;
+                            text-shadow: 1px 1px 0 #4F190C;
+                            background-image: linear-gradient(
+                                #E9944F,
+                                #FFDF5D
+                            );
+                            border-radius: 20px;
+                            padding: 5px;
+                            margin: 5px;
+                            ">Synthetic Playmate</summary>
+                        <p>Notes:</p>
+                        <ul>
+                            <li>None!!</li>
+                        </ul>
+                        <a href="https://drive.google.com/drive/folders/166PZWErvP9Zfq35sFcRdANHXCrnTe1M8?usp=drive_link">THIS SONG IS AI GENERATED</a>
+                    </details>
+                </details>
+
+                <details style="text-align: center;font-size: 200%;">
+                    <summary>Art</a></summary>
+                    <p>Coming soon!!!!!</p>
+                </details>
+            </div>
+        </div>
+    </body>
+</html>

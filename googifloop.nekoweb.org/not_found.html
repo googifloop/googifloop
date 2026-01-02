@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>not found :C</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="resources/not_found.css">
+        <link rel="icon" type="image/x-icon" href="/favicon.png">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<script src="https://unpkg.com/swup@4"></script>
+		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script>
+			const swup = new Swup({
+				plugins: [new SwupHeadPlugin()]
+			});
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+			$(document).ready(function(){
+				$('#headerContainer').load('/header.html');
+			});
+		</script>
+		<div id="headerContainer"></div>
+	</head>
+
+	<body>
+        <div class="transition-slide" id="swup">    
+            <div style="max-width: 20rem; margin: auto; text-align: center; color: white;">
+                <p id="kaomoji" style="font-size: 5rem; line-height: 0; color: inherit;">kaomoji here. Lol. Lowkirkenuinely</p>
+                <i style="font-size: 1rem; color: inherit;">(page was not fouuundddd...)</i><br>
+                <a href="javascript:history.back()" class="hslFun">click here 2 go to the previous page!</a>
+            </div>
+
+            <script>
+                const kaomojis = [
+                    "(╥﹏╥)",
+                    "( ;´ - `;)",
+                    "; (◞‸◟)",
+                    "˙◠˙",
+                    "||lI.‸.)",
+                    "(ᵕ—ᴗ—)",
+                    "( • ᴖ • ｡)",
+                    "(ᴗ_ ᴗ。)",
+                    "=͟͟͞(꒪ᗜ꒪ ‧̣̥̇)"
+                ];
+
+                const index = Math.floor(Math.random() * kaomojis.length);
+                const kaomoji = kaomojis[index];
+                const kaomojiText = document.getElementById("kaomoji");
+                kaomojiText.textContent = kaomoji;
+            </script>
+        </div>
+	</body>
+</html>

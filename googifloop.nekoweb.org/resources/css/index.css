@@ -1,0 +1,35 @@
+
+.thisspecificpartinmainidkwhy {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.indexflexL {
+    flex: 20%;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 31.25rem) {
+    .indexflexL {
+    display: none;
+    }
+}
+
+.indexflexR {
+    flex: 80%;
+    padding: 1rem;
+}
+
+.soradoll {
+    transition: 0.5s;
+}
+
+.soradoll:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.swagText {
+    animation: rainbowText 1s infinite;
+}
