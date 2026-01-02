@@ -8,10 +8,9 @@
         
 		<script src="https://unpkg.com/swup@4"></script>
 		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
-        <script src="https://unpkg.com/@swup/scripts-plugin@2"></script>
 		<script>
 			const swup = new Swup({
-				plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin({head: false, body: true})]
+				plugins: [new SwupHeadPlugin()]
 			});
 		</script>
 		<script src="/main.js"></script>
@@ -43,7 +42,7 @@
                             <div class="ocCard" style="--hover-color: #3158bb;">
                                 <a href="characters/sw1tch.html">
                                     <div class="cardBG">
-                                        <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/carouselSW1TCH.png">
+                                        <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/carousel/SW1TCH.png">
                                         <p>SWITCH</p>
                                         <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
                                     </div>
@@ -68,22 +67,25 @@
                     <div class="row">
                         <div class="column columnL">
                             <div class="artworkPreview">
-                                <img src="resources/img/site/exhibitions/cover424.png" class="albumCoverImg" onclick="show('424')"></img>
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/cover424.webp" class="albumCoverImg" onclick="show('424')"></img>
                             </div>
                             <div class="artworkPreview">
-                                <img src="resources/img/site/exhibitions/cover2Time.png" class="albumCoverImg" onclick="show('2Time')"></img>
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/cover2Time.webp" class="albumCoverImg" onclick="show('2Time')"></img>
                             </div>
                             <div class="artworkPreview">
-                                <img src="resources/img/site/exhibitions/coverOoSM.png" class="albumCoverImg" onclick="show('OoSM')"></img>
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverOoSM.webp" class="albumCoverImg" onclick="show('OoSM')"></img>
                             </div>
                             <div class="artworkPreview">
-                                <img src="resources/img/site/exhibitions/cover11.jpg" class="albumCoverImg" onclick="show('11')"></img>
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/cover11.webp" class="albumCoverImg" onclick="show('11')"></img>
                             </div>
                             <div class="artworkPreview">
-                                <img src="resources/img/site/exhibitions/coverGSFM.png" class="albumCoverImg" onclick="show('GSFM')"></img>
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverGSFM.webp" class="albumCoverImg" onclick="show('GSFM')"></img>
                             </div>
                             <div class="artworkPreview">
-                                <img src="resources/img/site/exhibitions/coverSynPlay.jpg" class="albumCoverImg" onclick="show('SynPlay')"></img>
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverSynPlay.webp" class="albumCoverImg" onclick="show('SynPlay')"></img>
+                            </div>
+                            <div class="artworkPreview">
+                                <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverholla.webp" class="albumCoverImg" onclick="show('holla')"></img>
                             </div>
                         </div>
                         <div class="column columnR" id="columnR">
@@ -91,23 +93,26 @@
                         </div>
 
                         <div id="424" style="display:none;">
-                                <iframe style="border: 0; width: 100%; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1614487798/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/4-24-2024-4-24-24">4-24-2024-4-24-24 by googifloop</a></iframe>
-                            </div>
-                            <div id="2Time" style="display:none;">
-                                <iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3041830216/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/track/veil-of-allegiance">Veil Of Allegiance by googifloop</a></iframe>
-                            </div>
-                            <div id="OoSM" style="display:none;">
-                                <iframe style="border: 0; width: 100%; height: 654px;" src="https://bandcamp.com/EmbeddedPlayer/album=3902365542/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/one-of-saturns-moons">One of Saturn&#39;s Moons by googifloop</a></iframe>
-                            </div>
-                            <div id="11" style="display:none;">
-                                <iframe style="border: 0; width: 100%; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=2071343630/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/eleven-eleven">ELEVEN ELEVEN by googifloop</a></iframe>
-                            </div>
-                            <div id="GSFM" style="display:none;">
-                                <iframe style="border: 0; width: 100%; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=1729539897/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/googifloops-silly-funky-mod-volume-1">googifloop&#39;s silly funky mod: Volume 1 by googifloop</a></iframe>
-                            </div>
-                            <div id="SynPlay" style="display:none;">
-                                <iframe style="border: 0; width: 100%; height: 522px;" src="https://bandcamp.com/EmbeddedPlayer/album=2495322117/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/synthetic-playmate">Synthetic Playmate by googifloop</a></iframe>
-                            </div>
+                            <iframe style="border: 0; width: 100%; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1614487798/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/4-24-2024-4-24-24">4-24-2024-4-24-24 by googifloop</a></iframe>
+                        </div>
+                        <div id="2Time" style="display:none;">
+                            <iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3041830216/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/track/veil-of-allegiance">Veil Of Allegiance by googifloop</a></iframe>
+                        </div>
+                        <div id="OoSM" style="display:none;">
+                            <iframe style="border: 0; width: 100%; height: 654px;" src="https://bandcamp.com/EmbeddedPlayer/album=3902365542/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/one-of-saturns-moons">One of Saturn&#39;s Moons by googifloop</a></iframe>
+                        </div>
+                        <div id="11" style="display:none;">
+                            <iframe style="border: 0; width: 100%; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=2071343630/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/eleven-eleven">ELEVEN ELEVEN by googifloop</a></iframe>
+                        </div>
+                        <div id="GSFM" style="display:none;">
+                            <iframe style="border: 0; width: 100%; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=1729539897/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/googifloops-silly-funky-mod-volume-1">googifloop&#39;s silly funky mod: Volume 1 by googifloop</a></iframe>
+                        </div>
+                        <div id="SynPlay" style="display:none;">
+                            <iframe style="border: 0; width: 100%; height: 522px;" src="https://bandcamp.com/EmbeddedPlayer/album=2495322117/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/synthetic-playmate">Synthetic Playmate by googifloop</a></iframe>
+                        </div>
+                        <div id="holla" style="display:none;">
+                            <iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2658516081/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/track/holla-day">holla day by googifloop</a></iframe>
+                        </div>
                     </div>
                 </details>
 
