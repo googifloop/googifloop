@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Geo:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css');
 /* ^^^ ignore that im shoving css into one file because its good */
-
+/* as swups docs once said:  
+The easiest solution is to use a single stylesheet for the whole website.
+FUCKKKKKKKKKKK so this css iis just gonna be big as hell
+*/
 body {
 	background-image: url("resources/img/main/googifloopBG.png");
 	margin: 1.25rem;

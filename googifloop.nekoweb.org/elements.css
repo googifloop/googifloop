@@ -1,3 +1,4 @@
+/*!@nkb "domain":"googifloop.nekoweb.org","rss":"","overflow":false,"readonly":false */
 /* 
     Don't use this file to edit your site style! Create a different CSS file for that.
     This file defines how custom elements (like sitebox) will look like.
@@ -7,17 +8,26 @@
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://nekoweb.org/assets/siteboxes.png */
 .site-box {
     text-align: center;
-    background-image: url(/assets/cookiebox.png); /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
-    background-repeat: no-repeat;
-    color: #b08271;
+    background-image: url(https://googifloop.nekoweb.org/googifloop.nekoweb.org/resources/img/main/googifloopBG.png); /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
+    background-repeat: repeat;
+    background-size: 40rem;
+    color: #1a2247;
     font-size: 12px;
+    font-family: "Comic Sans MS", sans-serif;
+    line-height: 1;
+    border-radius: 1rem;
+    outline: solid 2px #1a2247;
+    transition: 0.5;
+}
+.site-box:hover {
+  transform: rotate(9999deg);
 }
 .site-box > a > p {
-    color: var(--darkbrown);
+    color: #1a2247;
     font-weight: bold;
 }
 .site-box > a > span {
-    color: var(--darkbrown);
+    color: #1a2247;
 }
 
 /* Style for your 'Follow on Nekoweb' button (<iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28"></iframe>) */

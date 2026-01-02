@@ -6,9 +6,15 @@
         <link rel="icon" type="image/x-icon" href="/resources/img/main/favicon.png">    
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-		<script type="module" src="/swup.js"></script>
+		<script src="https://unpkg.com/swup@4"></script>
+		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script>
+			const swup = new Swup({
+				plugins: [new SwupHeadPlugin()]
+			});
+		</script>
 		<script src="/main.js"></script>
-		<div id="headerContainer"></div>
+		<header id="headerContainer"></header>
 	</head>
 
 	<body>
