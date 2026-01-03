@@ -1,0 +1,154 @@
+<link rel="stylesheet" href="/resources/css/header.css">
+<!-- navbar -->
+<div class="navBarMain">
+    <div class="navBarFlex">
+        <a href="/index.html" class="navbutton bigasslogo uiSounds">
+            <img src="/resources/img/main/googifloopLogo.png" alt="home">
+        </a>
+
+        <a href="/index.html" class="navbutton uiSounds">
+            <img src="/resources/img/main/navHome.png" alt="home part 2">
+            <p class="navSpecial">Home</p>
+        </a>
+
+        <a href="/exhibitions.html" class="navbutton uiSounds">
+            <img src="/resources/img/main/navExhibitions.png" alt="exhibitions">
+            <p class="navBig">Exhibitions</p>
+            <p class="navSmall">Works</p>
+        </a>
+
+        <a href="https://youtube.com/@googifloop" class="navbutton uiSounds">
+            <img src="/resources/img/main/navYouTube.png" alt="youtube channel">
+            <p class="navBig">YouTube</p>
+            <p class="navSmall">YT</p>
+        </a>
+
+        <a href="https://discord.gg/8Awp3JkVk9" class="navbutton uiSounds">
+            <img src="/resources/img/main/navDiscord.png" alt="discord server link">
+            <p class="navBig">Discord</p>
+            <p class="navSmall">DC</p>
+        </a>
+
+        <a href="https://open.spotify.com/artist/65n64HUO3LPTVBGI54FIUt" class="navbutton uiSounds">
+            <img src="/resources/img/main/navSpotify.png" alt="spotify">
+            <p class="navBig">Spotify</p>
+            <p class="navSmall">Spot.</p>
+        </a>
+
+        <a href="https://googifloop.bandcamp.com" class="navbutton uiSounds">
+            <img src="/resources/img/main/navBandcamp.png" alt="bandcamp">
+            <p class="navBig">Bandcamp</p>
+            <p class="navSmall">BC</p>
+        </a>
+
+        <a href="https://soundcloud.com/vkyoc7jsmfnb" class="navbutton uiSounds">
+            <img src="/resources/img/main/navSoundCloud.png" alt="bandcamp">
+            <p class="navBig">SoundCloud</p>
+            <p class="navSmall">SC</p>
+        </a>
+    </div>
+</div>
+<br>
+
+<!-- sound option -->
+<div class="footer">
+    <img id="muteButton" src="/resources/img/main/muteButtonmuted.png" onclick="toggleSound()">
+</div>
+
+<script>
+    const muteButton = document.getElementById("muteButton");
+    
+    if (typeof(Storage) === "undefined") {
+        localStorage.setItem("soundsOn", "muted");
+        muteButton.src = "/resources/img/main/muteButtonmuted.png"
+    }
+
+    function toggleSound() {
+        if (localStorage.soundsOn === "unmuted") {
+            localStorage.setItem("soundsOn", "muted");
+            muteButton.src = "/resources/img/main/muteButtonmuted.png"
+        } else {
+            localStorage.setItem("soundsOn", "unmuted");
+            muteButton.src = "/resources/img/main/muteButton.png"
+        }
+    }
+
+    function updateGraphics() {
+        if (localStorage.soundsOn === "muted") {
+            muteButton.src = "/resources/img/main/muteButtonmuted.png"
+        } else {
+            muteButton.src = "/resources/img/main/muteButton.png"
+        }
+    }
+
+    updateGraphics()
+</script>
+
+<!-- Really important script!(s) -->
+<script src="/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+</script>
+
+<!-- ui sounds yay. -->
+<script>
+    const selectSound = new Audio("/resources/audio/SELECT.mp3");
+    const confirmSound = new Audio("/resources/audio/CONFIRM.mp3");
+    const confirm2Sound = new Audio("/resources/audio/CONFIRM2.mp3");
+    const backSound = new Audio("/resources/audio/BACK.mp3");
+
+    const huh = new Audio("/resources/audio/huh.mp3");
+
+    $(document).ready(function(){
+        $(document).on("mouseenter", ".uiSounds", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                const selectSound1 = selectSound.cloneNode(true);
+                selectSound1.volume = 0.5;
+                selectSound1.cloneNode(true).play();
+            }
+        });
+        $(document).on("mousedown", ".uiSounds", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                confirmSound.cloneNode(true).play();
+            }
+        });
+
+        $(document).on("mouseenter", ".uiSounds2", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                const selectSound2 = selectSound.cloneNode(true);
+                selectSound2.volume = 0.5;
+                selectSound2.cloneNode(true).play();
+            }
+        });
+        $(document).on("mousedown", ".uiSounds2", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                confirm2Sound.cloneNode(true).play();
+            }
+        });
+
+        $(document).on("mouseenter", ".uiSounds3", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                const selectSound3 = selectSound.cloneNode(true);
+                selectSound3.volume = 0.5;
+                selectSound3.cloneNode(true).play();
+            }
+        });
+        $(document).on("mousedown", ".uiSounds3", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                backSound.cloneNode(true).play();
+            }
+        });
+
+
+
+        $(document).on("mouseenter", ".uiSoundsCat", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                const clonedHuh = huh.cloneNode(true);
+                clonedHuh.volume = 0.1;
+                clonedHuh.play();
+            }
+        });
+    });
+</script>

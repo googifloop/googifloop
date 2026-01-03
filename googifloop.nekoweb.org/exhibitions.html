@@ -8,9 +8,10 @@
         
 		<script src="https://unpkg.com/swup@4"></script>
 		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script src="https://unpkg.com/@swup/scripts-plugin@2"></script>
 		<script>
 			const swup = new Swup({
-				plugins: [new SwupHeadPlugin()]
+				plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin({head: false, body: true})]
 			});
 		</script>
 		<script src="/main.js"></script>
@@ -24,12 +25,11 @@
             <p style="letter-spacing: 3px;">what would you like to look at?</p>
                 <!-- ocs section -->
                 <details style="text-align: center;font-size: 200%;">
-                    <summary>OCs</summary>
-
+                    <summary class="uiSounds">OCs</summary>
                     <div class="carouselMain">
                         <div class="ocCarousel">
                             <!-- template here -->
-                            <!-- <div class="ocCard" style="--hover-color: #FFFFFF;">
+                            <!-- <div class="ocCard uiSounds2" style="--hover-color: #FFFFFF;">
                                 <a href="characters/characterTemplate.html">
                                     <div class="cardBG">
                                         <img src="https://placehold.co/480x1200">
@@ -39,11 +39,201 @@
                                 </a>
                             </div> -->
 
-                            <div class="ocCard" style="--hover-color: #3158bb;">
+                            <div class="ocCard uiSounds2" style="--hover-color: #3158bb;">
                                 <a href="characters/sw1tch.html">
                                     <div class="cardBG">
                                         <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/carousel/SW1TCH.png">
                                         <p>SWITCH</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #9A66FF;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>SCRUFFY</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="ocCard uiSounds2" style="--hover-color: #00EA9B;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>ZAY</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #434768;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>BLAKE</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #02D5C0;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p style="writing-mode: vertical-rl;">TUBERCULOSIS</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #22994C;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p style="writing-mode: vertical-rl;">zoogerbloop424</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #8885D5;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>PARSLEY</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #76D390;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>TELESTO</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #385B8A;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>EMERSON</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #FFFFFF;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>ELLIOTT</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #FEC908;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>SCRAP</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #6D89BD;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>CARLOS</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #B7D1A3;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>GIMGOM</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #D1B4AD;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p style="writing-mode: vertical-rl;">SIR SAVORYCYLINDERS</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #67B456;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>ECLAIR</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #E64F52;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>CHERRI</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #FF3B31;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>DARREN</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: gold;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>TICK</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: gold;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>TOCK</p>
+                                        <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="ocCard uiSounds2" style="--hover-color: #FFFFFF;">
+                                <a href="characters/characterTemplate.html">
+                                    <div class="cardBG">
+                                        <img src="https://placehold.co/480x1200">
+                                        <p>place the holder</p>
                                         <img src="https://bettysgraphics.neocities.org/images/web%20graphics/new%2016.gif">    
                                     </div>
                                 </a>
@@ -54,37 +244,32 @@
 
                 <!-- Music -->
                 <details style="text-align: center;font-size: 200%;">
-                    <summary>Music</summary>
+                    <summary class="uiSounds">Music</summary>
                     <p><a href="https://drive.google.com/drive/folders/1l8tdDdKNiLRPPvtR5RIkXCyFrj2JZQtV?usp=sharing">All my songs in a downloadable format</a>, or if you'd like to skim through them, an audio player!</p>
-                    <script>
-                        function show(param_div_id) {
-                            document.getElementById('columnR').innerHTML = document.getElementById(param_div_id).innerHTML;
-                        }
-                    </script>
 
                     <h1>please click on an album, EP, or single to listen!!</h1>
 
                     <div class="row">
                         <div class="column columnL">
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/cover424.webp" class="albumCoverImg" onclick="show('424')"></img>
                             </div>
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/cover2Time.webp" class="albumCoverImg" onclick="show('2Time')"></img>
                             </div>
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverOoSM.webp" class="albumCoverImg" onclick="show('OoSM')"></img>
                             </div>
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/cover11.webp" class="albumCoverImg" onclick="show('11')"></img>
                             </div>
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverGSFM.webp" class="albumCoverImg" onclick="show('GSFM')"></img>
                             </div>
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverSynPlay.webp" class="albumCoverImg" onclick="show('SynPlay')"></img>
                             </div>
-                            <div class="artworkPreview">
+                            <div class="artworkPreview uiSounds2">
                                 <img src="https://file.garden/aU4nhYV5_n1pLO-t/googifloopSiteMedia/albumCovers/coverholla.webp" class="albumCoverImg" onclick="show('holla')"></img>
                             </div>
                         </div>
@@ -92,39 +277,54 @@
                             <p>swag, but in the other column</p>
                         </div>
 
+                        <!-- bandcamp, soundcloud, then spotify -->
                         <div id="424" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1614487798/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/4-24-2024-4-24-24">4-24-2024-4-24-24 by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2118183212&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/sets/4-24-2024-4-24-24a" title="4-24-2024-4-24-24" target="_blank" style="color: #cccccc; text-decoration: none;">4-24-2024-4-24-24</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/34JrAdaWry6btMgb6BHoau?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                         <div id="2Time" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3041830216/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/track/veil-of-allegiance">Veil Of Allegiance by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2216976323&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/veil-of-allegiance" title="Veil of Allegiance" target="_blank" style="color: #cccccc; text-decoration: none;">Veil of Allegiance</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5vvNwBakO2nvxcgULEEzql?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                         <div id="OoSM" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 654px;" src="https://bandcamp.com/EmbeddedPlayer/album=3902365542/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/one-of-saturns-moons">One of Saturn&#39;s Moons by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2118183683&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/sets/one-of-saturns-moons" title="One of Saturn&#x27;s Moons" target="_blank" style="color: #cccccc; text-decoration: none;">One of Saturn&#x27;s Moons</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/0xxdSKFveO0DVfVjh5Lfs2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                         <div id="11" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=2071343630/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/eleven-eleven">ELEVEN ELEVEN by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2118184985&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/sets/eleven-eleven" title="ELEVEN ELEVEN" target="_blank" style="color: #cccccc; text-decoration: none;">ELEVEN ELEVEN</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4j629grUFB6tM2Wkhlvj0x?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                         <div id="GSFM" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=1729539897/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/googifloops-silly-funky-mod-volume-1">googifloop&#39;s silly funky mod: Volume 1 by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2168458871&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/sets/googifloops-silly-funky-mod-volume-1" title="googifloop&#x27;s silly funky mod: Volume 1" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop&#x27;s silly funky mod: Volume 1</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/0UVAnMJfIrWqDJUY8e5y17?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                         <div id="SynPlay" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 522px;" src="https://bandcamp.com/EmbeddedPlayer/album=2495322117/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/album/synthetic-playmate">Synthetic Playmate by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2216977442&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/this-song-is-ai-generated" title="THIS SONG IS AI GENERATED" target="_blank" style="color: #cccccc; text-decoration: none;">THIS SONG IS AI GENERATED</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/0WIwreGBqvyHCy9oWoyoh8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                         <div id="holla" style="display:none;">
                             <iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2658516081/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://googifloop.bandcamp.com/track/holla-day">holla day by googifloop</a></iframe>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2240615597&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vkyoc7jsmfnb" title="googifloop" target="_blank" style="color: #cccccc; text-decoration: none;">googifloop</a> · <a href="https://soundcloud.com/vkyoc7jsmfnb/holla-day" title="holla day" target="_blank" style="color: #cccccc; text-decoration: none;">holla day</a></div>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2OQEklz4C5EUr11ByOGhb0?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                     </div>
                 </details>
 
                 <!-- Stems -->
                 <details style="text-align: center;font-size: 200%;">
-                    <summary>Stems & Project Files</summary>
+                    <summary class="uiSounds">Stems & Project Files</summary>
                     <p>Also heads up, some of these stems might be TOO LOUD and will clip. This is because these are separated stems, and sometimes I rely on limiting and compressing during the mastering to lessen the sound.</p>
                     <p><i>Some of these tracks won't sound exactly the same due to mastering.</i></p>
 
                     <!-- 4-24 time -->
                     <details style="text-align: center;font-size: 75%;">
-                        <summary style="
+                        <summary class="uiSounds2" style="
                             color: #FBCB40;background-color: #222222;
                             border-radius: 20px;
                             padding: 5px;
@@ -147,9 +347,9 @@
                         <a href="https://app.box.com/s/okkw3ctdkgk3zgxw4m8d1j35zx370de7">wistful 0825</a><br>
                     </details>
 
-                    <!-- Two Time's Impish Delights (soon) -->
-                    <details style="text-align: center;font-size: 75%; filter:blur(0.1rem)">
-                        <summary style="
+                    <!-- Two Time's Impish Delights -->
+                    <details style="text-align: center;font-size: 75%;">
+                        <summary class="uiSounds2" style="
                             color: #FFFFFF;
                             text-shadow: 1px 1px 0 #000000;
                             background-image: linear-gradient(
@@ -162,19 +362,19 @@
                             ">Two Time's Impish Delights</summary>
                         <p>Notes:</p>
                         <ul>
-                            <li>Unfortunately, coming soon :C. I'm currently on vacation, so expect these to be out soon !!</li>
+                            <li>Two times!</li>
                         </ul>
-                        <a href="https://youtu.be/dQw4w9WgXcQ">Songs will be here eventually.</a>
+                        <a href="https://app.box.com/s/s9xg3btrofhjvqawb43w83zimg50rgv2">Download stems</a>
                     </details>
 
-                    <!-- One of Saturn's Moons (soon) -->
-                    <details style="text-align: center;font-size: 75%; filter:blur(0.1rem)">
-                        <summary style="
-                            color: #FFFFFF;
-                            text-shadow: 1px 1px 0 #000000;
+                    <!-- One of Saturn's Moons -->
+                    <details style="text-align: center;font-size: 75%;">
+                        <summary class="uiSounds2" style="
+                            color: #199593;
+                            text-shadow: 1px 1px 0 #006062;
                             background-image: linear-gradient(
-                                #AAAAAA,
-                                #333333
+                                white,
+                                #77D390
                             );
                             border-radius: 20px;
                             padding: 5px;
@@ -182,14 +382,20 @@
                             ">One of Saturn's Moons</summary>
                         <p>Notes:</p>
                         <ul>
-                            <li>Unfortunately, coming soon :C. I'm currently on vacation, so expect these to be out soon !!</li>
+                            <li>Nothing I think</li>
                         </ul>
-                        <a href="https://youtu.be/dQw4w9WgXcQ">Songs will be here eventually.</a>
+                        <a href="https://app.box.com/s/d27epwvhtpxxpsnl3o5k39bb4k6ajlu7">Download all stems</a><br>
+                        <a href="https://app.box.com/s/xx2oprglfcj7dtrqezx9i7lj79ohlxxs">AlienCore</a><br>
+                        <a href="https://app.box.com/s/ggmdwg3fcz63nsbmz0aiy43q8b53mdjk">Cobsphere</a><br>
+                        <a href="https://app.box.com/s/uy4ampilj44gt0yw7xm8go5kfn61stw9">DCCCXXV</a><br>
+                        <a href="https://app.box.com/s/7m4rhl28now03duqa4ofe9a35bgg2wka">dillydally</a><br>
+                        <a href="https://app.box.com/s/xx2oprglfcj7dtrqezx9i7lj79ohlxxs">Give Up</a><br>
+                        <a href="https://app.box.com/s/ruw0hc4w9k7bew92hhqcni9w4nyrvkhh">IWEC</a><br>
                     </details>
 
                     <!-- 11-11 time -->
                     <details style="text-align: center;font-size: 75%;">
-                        <summary style="
+                        <summary class="uiSounds2" style="
                             color: white;
                             text-shadow: 1px 1px 0 #3D5463;
                             background-image: linear-gradient(to bottom,
@@ -214,28 +420,27 @@
                     </details>
 
                     <!-- googifloop's silly funky mod (soon) -->
-                    <details style="text-align: center;font-size: 75%; filter:blur(0.1rem)">
-                        <summary style="
-                            color: #FFFFFF;
-                            text-shadow: 1px 1px 0 #000000;
+                    <details style="text-align: center;font-size: 75%;">
+                        <summary class="uiSounds2" style="
+                            color: #A180FF;
                             background-image: linear-gradient(
-                                #AAAAAA,
-                                #333333
+                                #3F4773,
+                                #1C2553
                             );
                             border-radius: 20px;
                             padding: 5px;
                             margin: 5px;
-                            ">googifloop's silly funky mod</summary>
+                            ">googifloop's silly funky mod vol. 1</summary>
                         <p>Notes:</p>
                         <ul>
-                            <li>Unfortunately, coming soon :C. I'm currently on vacation, so expect these to be out soon !!</li>
+                            <li>Not here yet, too many stems to export and im tired</li>
                         </ul>
                         <a href="https://youtu.be/dQw4w9WgXcQ">Songs will be here eventually.</a>
                     </details>
 
                     <!-- Synthetic Playmate -->
                     <details style="text-align: center;font-size: 75%;">
-                        <summary style="
+                        <summary class="uiSounds2" style="
                             color: #7F3D23;
                             text-shadow: 1px 1px 0 #4F190C;
                             background-image: linear-gradient(
@@ -254,8 +459,9 @@
                     </details>
                 </details>
 
+                <!-- art -->
                 <details style="text-align: center;font-size: 200%;">
-                    <summary>Art</a></summary>
+                    <summary class="uiSounds">Art</summary>
                     <p>Coming soon!!!!!</p>
                 </details>
             </div>

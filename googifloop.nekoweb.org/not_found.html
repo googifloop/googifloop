@@ -8,9 +8,10 @@
         
 		<script src="https://unpkg.com/swup@4"></script>
 		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script src="https://unpkg.com/@swup/scripts-plugin@2"></script>
 		<script>
 			const swup = new Swup({
-				plugins: [new SwupHeadPlugin()]
+				plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin({head: false, body: true})]
 			});
 		</script>
 		<script src="/main.js"></script>
@@ -22,7 +23,7 @@
             <div style="max-width: 20rem; margin: auto; text-align: center; color: white;">
                 <p id="kaomoji" style="font-size: 5rem; line-height: 0; color: inherit;">kaomoji here. Lol. Lowkirkenuinely</p>
                 <i style="font-size: 1rem; color: inherit;">(page was not fouuundddd...)</i><br>
-                <a href="javascript:history.back()" class="hslFun">click here 2 go to the previous page!</a>
+                <a href="javascript:history.back()" class="hslFun uiSounds">click here 2 go to the previous page!</a>
             </div>
 
             <script>

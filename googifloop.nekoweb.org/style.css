@@ -5,13 +5,17 @@
 body {
 	background-image: url("resources/img/main/googifloopBG.png");
 	margin: 1.25rem;
+	margin-top: 2.5rem;
 	font-family: "Nunito", sans-serif;
-/* 
-	animation-name: swagIn;
-	animation-duration: 1s;
-	animation-timing-function: ease-out;
-	animation-fill-mode: both; */
 }
+
+html::-webkit-scrollbar {
+	display: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+/* WE ARE CHARLIE KIRRRRKKKKKKKK WE CARRY THE FLAMEE
+hi jolly ggoogifloop here */
 
 h1 {
 	color: white;
@@ -75,6 +79,20 @@ a {
 
 .alignLeft, .alignLeft h2, .alignLeft p, .alignLeft li {
 	text-align: left;
+}
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+details::details-content {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+}
+
+details[open]::details-content {
+	max-height: fit-content;
 }
 
 /*
@@ -236,6 +254,10 @@ Retrieved 2025-11-06, License - CC BY-SA 4.0
 	animation: wave 2s ease-in-out infinite;
 }
 
+.hslFun {
+	animation: rainbowText 5s ease-in-out infinite;
+}
+
 /* anims */
 
 @keyframes swagIn {
@@ -303,6 +325,34 @@ Retrieved 2025-11-06, License - CC BY-SA 4.0
 	100% {
 		background-position: -10rem -10rem;
 	}
+}
+
+@keyframes shake {
+	0% { transform: translate(.4px, .4px) rotate(0deg); }
+	10% { transform: translate(-.4px, -.4px) rotate(-.4deg); }
+	20% { transform: translate(-.4px, 0px) rotate(.4deg); }
+	30% { transform: translate(.4px, .4px) rotate(0deg); }
+	40% { transform: translate(.4px, -.4px) rotate(.4deg); }
+	50% { transform: translate(-.4px, .4px) rotate(-.4deg); }
+	60% { transform: translate(-.4px, .4px) rotate(0deg); }
+	70% { transform: translate(.4px, .4px) rotate(-.4deg); }
+	80% { transform: translate(-.4px, -.4px) rotate(.4deg); }
+	90% { transform: translate(.4px, .4px) rotate(0deg); }
+	100% { transform: translate(.4px, -.4px) rotate(-.4deg); }
+}
+
+@keyframes shakeIntense {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -1px) rotate(-1deg); }
+	20% { transform: translate(-1px, 0px) rotate(1deg); }
+	30% { transform: translate(1px, 1px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(1px, 1px) rotate(-1deg); }
+	60% { transform: translate(1px, 1px) rotate(0deg); }
+	70% { transform: translate(1px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 1px) rotate(0deg); }
+	100% { transform: translate(1px, -1px) rotate(-1deg); }
 }
 
 .transition-slide {

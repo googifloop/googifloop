@@ -23,13 +23,13 @@
 }
 
 .soradoll {
-    transition: 0.5s;
+    transition: 999s;
 }
 
 .soradoll:hover {
-    transform: scale(1.1) rotate(15deg);
+    animation: shakeIntense 0.3s infinite linear;
 }
 
 .swagText {
-    animation: rainbowText 1s infinite;
+    animation: rainbowText 1s infinite, shake 0.3s linear infinite;
 }
