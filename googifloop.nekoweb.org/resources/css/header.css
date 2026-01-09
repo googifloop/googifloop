@@ -2,18 +2,26 @@
 
 .navBarMain {
     position: fixed;
-    top: 1.25rem;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    max-width: 70rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+
+    border: 0.1rem solid rgba(255,255,255,0.3);
+	box-shadow: 0 0.3rem 1rem 0 rgba(31, 38, 135, 0.3);
+	background: rgba(255,255,255,0.7);
+	backdrop-filter: blur(2px);
+
     z-index: 42424;
-    width: 100%;
-    height: 2.5rem;
-    background-image: linear-gradient(to bottom, #fcfcfc, #e5eff9 50%, #dce6f4 50%, #dce8f6);
-    filter: drop-shadow(0 0.05rem 0.25rem rgba(26,34,71,1));
-    margin: -1.25rem;
-    margin-bottom: 0;
+    padding: 0 1.5rem;
 
     animation-name: moveUp;
     animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     animation-fill-mode: forwards;
 }
 
@@ -105,9 +113,11 @@
 
 @keyframes moveUp {
     0% {
-        transform: translateY(-4rem);
+        transform: translate(-50%, -5rem);
+        opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translate(-50%, 0);
+        opacity: 1;
     }
 }

@@ -25,14 +25,24 @@
     flex: 70%
 }
 
-/* OC section */
-
-.carouselMain {
-    padding: 2rem;
+.columnR iframe {
+    background: rgba(25, 34, 71, 0.3);
+    background-image: url('/resources/img/main/loaderRun.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10rem;
 }
 
+details summary::-webkit-details-marker {display:none}
+details summary {
+    cursor: pointer;
+}
+
+/* OC section */
+
 .ocCarousel {
-    width: 100%;
+    padding: 0.25rem;
+    width: auto;
     height: 30rem;
     margin: auto;
     align-items: center;
@@ -61,6 +71,8 @@
     color: var(--hover-color);
     outline-color: var(--hover-color);
     transform: translateY(-1rem) scale(1.05);
+    box-shadow: 0 0 1rem 0.5rem var(--hover-color);
+    border-color: var(--hover-color);
 }
 
 .cardBG {
