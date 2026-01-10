@@ -57,6 +57,10 @@ li {
 
 summary {
 	text-align: center;
+	display: block;
+}
+summary::webkit-details-marker {
+    display: none;
 }
 
 a {
@@ -80,6 +84,7 @@ details::details-content {
 
 details[open]::details-content {
 	max-height: fit-content;
+	transition: max-height 0.5s ease-out;
 }
 
 /*
