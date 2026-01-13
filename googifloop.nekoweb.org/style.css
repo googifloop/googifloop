@@ -39,7 +39,7 @@ p, i {
 	color: #1a2247;
 	text-align: center;
 	font-size: 1.25rem;
-	line-height: 0.8;
+	line-height: 0.9;
 }
 
 sub, sup {
@@ -55,12 +55,25 @@ li {
 	transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 
-summary {
-	text-align: center;
-	display: block;
+details::details-content {
+	block-size: 0;
+	overflow: hidden;
+	transition-property: block-size, content-visibility;
+	transition-duration: 0.5s;
+	transition-behavior: allow-discrete;
 }
-summary::webkit-details-marker {
-    display: none;
+
+details[open]::details-content {
+	block-size: auto;
+}
+
+summary {
+	cursor: pointer;
+	text-align: center;
+}
+
+summary::marker {
+	content: "◇ ";
 }
 
 a {
@@ -72,39 +85,6 @@ a {
 	text-align: left;
 }
 
-:root {
-  interpolate-size: allow-keywords;
-}
-
-details::details-content {
-	overflow: hidden;
-	max-height: 0;
-	transition: max-height 0.5s ease-out;
-}
-
-details[open]::details-content {
-	max-height: fit-content;
-	transition: max-height 0.5s ease-out;
-}
-
-/*
-Source - https://stackoverflow.com/a
-Posted by Vargr, modified by community. See post 'Timeline' for change history
-Retrieved 2025-11-06, License - CC BY-SA 4.0
-*/
-
-.noantialiasing {
-	image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
-	image-rendering: -moz-crisp-edges; /* Firefox                        */
-	image-rendering: -o-crisp-edges; /* Opera                          */
-	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-	image-rendering: pixelated; /* Universal support since 2021   */
-	image-rendering: optimize-contrast; /* CSS3 Proposed                  */
-	-ms-interpolation-mode: nearest-neighbor; /* IE8+                           */
-}
-
-/* Listen I just want no anti-aliasing */
-
 /* classes and stuff. Yawwnnn */
 
 .main, .toc, .infoBox, .basicInfoTbl, .quoteBox, .warning {
@@ -114,11 +94,25 @@ Retrieved 2025-11-06, License - CC BY-SA 4.0
 	padding: 2rem;
 	border: 0.1rem solid rgba(255,255,255,0.3);
 	box-shadow: 0 0.3rem 1rem 0 rgba(31, 38, 135, 0.3);
-	background: rgba(255,255,255,0.7);
-	backdrop-filter: blur(2px);
+	background: rgba(255,255,255,0.4);
+	backdrop-filter: blur(4px);
 	
 	border-radius: 1rem;
 	overflow: hidden;
+
+	animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+	opacity: 0;
+}
+
+.main * {
+	animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+	opacity: 0;
+	animation-delay: 0.1s;
+}
+
+.mainCharPage {
+	animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+	opacity: 0;
 }
 
 .artworkPreview {
@@ -241,6 +235,7 @@ Retrieved 2025-11-06, License - CC BY-SA 4.0
 }
 
 .hslFun {
+	opacity: 1;
 	animation: rainbowText 5s ease-in-out infinite;
 }
 
@@ -270,37 +265,37 @@ Retrieved 2025-11-06, License - CC BY-SA 4.0
 
 @keyframes rainbowText {
 	0% {
-		color: hsl(0, 70%, 70%)
+		color: hsl(0, 70%, 60%)
 	}
 	10% {
-		color: hsl(40, 70%, 70%);
+		color: hsl(40, 70%, 60%);
 	}
 	20% {
-		color: hsl(80, 70%, 70%);
+		color: hsl(80, 70%, 60%);
 	}
 	30% {
-		color: hsl(120, 70%, 70%);
+		color: hsl(120, 70%, 60%);
 	}
 	40% {
-		color: hsl(160, 70%, 70%);
+		color: hsl(160, 70%, 60%);
 	}
 	50% {
-		color: hsl(200, 70%, 70%);
+		color: hsl(200, 70%, 60%);
 	}
 	60% {
-		color: hsl(240, 70%, 70%);
+		color: hsl(240, 70%, 60%);
 	}
 	70% {
-		color: hsl(280, 70%, 70%);
+		color: hsl(280, 70%, 60%);
 	}
 	80% {
-		color: hsl(320, 70%, 70%);
+		color: hsl(320, 70%, 60%);
 	}
 	90% {
-		color: hsl(360, 70%, 70%);
+		color: hsl(360, 70%, 60%);
 	}
 	100% {
-		color: hsl(360, 70%, 70%);
+		color: hsl(360, 70%, 60%);
 	}
 }
 
@@ -341,29 +336,42 @@ Retrieved 2025-11-06, License - CC BY-SA 4.0
 	100% { transform: translate(1px, -1px) rotate(-1deg); }
 }
 
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
 .transition-slide {
 	transition-property: opacity, transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-	transform: translateX(0);
+	transform: translateY(0);
 	opacity: 1;
 }
 
 html.is-animating .transition-slide {
 	opacity: 0;
-	transform: translateX(-1em);
+	transform: translateY(0.5em) scale(0.98);
 }
 
 html.is-leaving .transition-slide {
-	transform: translateX(1em);
+	transform: translateY(0.5em) scale(0.98);
 }
 
 
 html.is-animating.to-left .transition-slide {
 	opacity: 0;
-	transform: translateX(1em);
+	transform: translateY(-0.5em);
 }
 
 html.is-leaving.to-left .transition-slide {
-	transform: translateX(-1em);
+	transform: translateY(0.5em);
 }

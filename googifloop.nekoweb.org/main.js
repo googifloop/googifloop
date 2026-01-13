@@ -25,8 +25,12 @@ var confirmRelease = new Howl({
     src: ['/resources/audio/confirmRelease.mp3'],
     volume: 0.3
 });
-var back = new Howl({
-    src: ['/resources/audio/BACK.mp3'],
+var backPress = new Howl({
+    src: ['/resources/audio/backPress.mp3'],
+    volume: 0.3
+});
+var backRelease = new Howl({
+    src: ['/resources/audio/backRelease.mp3'],
     volume: 0.3
 });
 var huh = new Howl({
@@ -76,7 +80,12 @@ $(function(){
     });
     $(document).on("mousedown", ".uiSounds3", function() {
         if (localStorage.soundsOn === "unmuted") {
-            back.play();
+            backPress.play();
+        }
+    });
+    $(document).on("mouseup", ".uiSounds3", function() {
+        if (localStorage.soundsOn === "unmuted") {
+            backRelease.play();
         }
     });
 
