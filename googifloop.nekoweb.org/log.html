@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>LOG #001</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="/resources/css/sitenamehere.css">
+        <link rel="icon" type="image/x-icon" href="/favicon.png">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<script src="https://unpkg.com/swup@4"></script>
+		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+		<script src="https://unpkg.com/@swup/scripts-plugin@2"></script>
+		<script>
+			const swup = new Swup({
+				plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin({head: false, body: true})]
+			});
+		</script>
+		<script src="/main.js"></script>
+		<div id="headerContainer"></div>
+	</head>	
+
+	<body>
+        <div class="transition-slide" id="swup">
+            <div class="main">
+                <h1>site updates</h1>
+
+                <div>
+                    <h2>13.1.2026 - initial site release maybe?</h2>
+
+                    <p>Nothing really to say here</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

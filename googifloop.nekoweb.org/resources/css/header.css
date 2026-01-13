@@ -44,19 +44,10 @@
     color: #1a2247;
     filter: drop-shadow(0 0.1rem 0.05rem rgba(0,0,0,0.5));
     text-decoration: none;
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 
-.navBig {
+.navTxt {
     display: inline-block;
-}
-
-.navSpecial {
-    display: inline-block;
-}
-
-.navSmall {
-    display: none;
 }
 
 .bigasslogo {
@@ -82,6 +73,11 @@
         justify-content: space-evenly;
     }
     .bigasslogo {
+        display: none;
+    }
+}
+@media only screen and (max-width: 24rem) {
+    .navTxt {
         display: none;
     }
 }
