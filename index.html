@@ -40,8 +40,13 @@
 
 					<i>want to contact me? send an <a href="mailto:googifloop424@gmail.com" class="uiSounds">email</a>, or DM me on Discord
 					<i class="uiSounds"><a href="https://googifloop.atabook.org/">guestbook / message board</a></i><br><br>
-					<a href="https://googifloop.nekoweb.org/" class="uiSounds"><img src="/resources/img/main/googifloopButton.gif"></a>
-					<a href="https://nekoweb.org/" class="uiSounds"><img src="https://nekoweb.org/assets/buttons/button9.gif"></a><!-- button by fujoshi.nekoweb.org -->
+					<div class="buttonGrid">
+						<h1 style="color:white; font-size: 2rem">cool people</h1>
+						<a href="https://googifloop.nekoweb.org/" class="uiSounds"><img class="buttonSite" class="buttonImg" src="/resources/img/main/googifloopButton.gif"></a>
+						<a href="https://sadsharkfinns.straw.page/" class="uiSounds"><img class="buttonSiteFinn" src="https://file.garden/aU4nhYV5_n1pLO-t/DITFDarkheartTransparent.png"></a>
+						<a href="https://32enoki.net/" class="uiSounds"><img class="buttonSite" src="https://32enoki.net/88x31.png" alt="enokiton-3 site"></a>
+						<a href="https://babylion122.com/" class="uiSounds" style="grid-column: span 2; grid-row: span 3;" title="Only reason I made this bigger was because the details were really small"><img class="buttonImg" src="https://file.garden/aU4nhYV5_n1pLO-t/babylion122%20button.gif"></a>
+					</div>
 
 					<div style="display:flex; justify-content: space-evenly;">
 						<a href="https://youtube.com/@googifloop" class="navbutton uiSounds">
@@ -95,7 +100,9 @@
 					var meeow = new Howl({
 						src: ['/resources/audio/mrreow.mp3']
 					});
-					meeow.play();
+					if (localStorage.soundsOn === 'unmuted') {
+						meeow.play();
+					}
 				">
 				<script src="/resources/lib/oneko.js" defer></script>
 			</div>
