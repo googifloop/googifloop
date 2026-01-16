@@ -17,4 +17,4 @@
     color: lime;
 }
 
-.log1 p, .log1 h2 { color: inherit; text-align: left; }
+.log1 * { color: inherit; text-align: left; }
