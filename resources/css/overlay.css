@@ -82,6 +82,7 @@
 	text-align: right;
 	font-size: rem;
 	line-height: 0.9;
+    font-size: 1rem;
 }
 /* USEFUL FORMULA */
 /* window.innerWidth / parseFloat(getComputedStyle(document.documentElement).fontSize) */

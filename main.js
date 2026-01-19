@@ -109,7 +109,7 @@ async function updLogCommit() {
 
     const fp = window.location.pathname.split("/").pop() || "index.html";
     
-    fetch(`https://api.github.com/repos/googifloop/googifloop.github.io/commits?path=${fp}&per_page=1`)
+    fetch(`https://api.github.com/repos/googifloop/googifloop.github.io/commits?path=${fp}&per_page=1&t=${Date.now()}`)
         .then(res => res.json())
         .then(data => {
             if (data[0]) {
