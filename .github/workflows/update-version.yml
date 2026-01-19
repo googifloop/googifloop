@@ -13,7 +13,7 @@ jobs:
 
       - name: Write commit hash to version.txt
         run: |
-          echo "Bop: $(git rev-parse --short HEAD) ($(date +'%m/%d/%Y'))" > version.txt
+          echo "commit $(git rev-parse --short HEAD) ($(date +'%m/%d/%Y'))" > version.txt
 
       - name: Commit and push changes
         run: |

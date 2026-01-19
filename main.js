@@ -108,15 +108,21 @@ function updLogCommit() {
     if (!commitElement) return;
     
     fetch('/version.txt?t=' + Date.now())
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) throw new Error("version txt not founddd EUUUUUGUGGGHHHH");
+            return res.text();
+        })
         .then(text => {
             commitElement.innerText = text.trim();
         })
-        .catch(() => commitElement.innerText = "can't load commit ;_;");
+        .catch((err) => {
+            console.error(err);
+            commitElement.innerText = "can't load commit ;_;";
+        });
 }
 
 document.addEventListener("DOMContentLoaded", updLogCommit);
 
 if (window.swup) {
-    swup.hooks.on('page:view', tryUpdate);
+    swup.hooks.on('page:view', updLogCommit);
 }
