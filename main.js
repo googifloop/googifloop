@@ -41,61 +41,104 @@ var huh = new Howl({
 $(function(){
     $('#headerContainer').load('/overlay.html');
     
-    $(document).on("mouseenter", ".uiSounds", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            select.play();
-        }
-    });
-    $(document).on("mousedown", ".uiSounds", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            confirmPress.play();
-        }
-    });
-    $(document).on("mouseup", ".uiSounds", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            confirmRelease.play();
-        }
-    });
+    // UI Sound
+    {
+        $(document).on("mouseenter", ".uiSounds", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                select.play();
+            }
+        });
+        $(document).on("mousedown", ".uiSounds", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                confirmPress.play();
+            }
+        });
+        $(document).on("mouseup", ".uiSounds", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                confirmRelease.play();
+            }
+        });
 
-    $(document).on("mouseenter", ".uiSounds2", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            select.play();
-        }
-    });
-    $(document).on("mousedown", ".uiSounds2", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            confirmPress.play();
-        }
-    });
-    $(document).on("mouseup", ".uiSounds2", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            confirmRelease.play();
-        }
-    });
+        $(document).on("mouseenter", ".uiSounds2", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                select.play();
+            }
+        });
+        $(document).on("mousedown", ".uiSounds2", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                confirmPress.play();
+            }
+        });
+        $(document).on("mouseup", ".uiSounds2", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                confirmRelease.play();
+            }
+        });
 
-    $(document).on("mouseenter", ".uiSounds3", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            select.play();
-        }
-    });
-    $(document).on("mousedown", ".uiSounds3", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            backPress.play();
-        }
-    });
-    $(document).on("mouseup", ".uiSounds3", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            backRelease.play();
-        }
-    });
+        $(document).on("mouseenter", ".uiSounds3", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                select.play();
+            }
+        });
+        $(document).on("mousedown", ".uiSounds3", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                backPress.play();
+            }
+        });
+        $(document).on("mouseup", ".uiSounds3", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                backRelease.play();
+            }
+        });
 
-    $(document).on("mouseenter", ".uiSoundsCat", function() {
-        if (localStorage.soundsOn === "unmuted") {
-            huh.play();
-        }
-    });
+        $(document).on("mouseenter", ".uiSoundsCat", function() {
+            if (localStorage.soundsOn === "unmuted") {
+                huh.play();
+            }
+        });
+    }
 });
 
 function show(param_div_id) {
     document.getElementById('columnR').innerHTML = document.getElementById(param_div_id).innerHTML;
+}
+
+async function updLogCommit() {
+    const commitElement = document.getElementById('commit');
+    if (!commitElement) return;
+
+    const fp = window.location.pathname.split("/").pop() || "index.html";
+    
+    fetch(`https://api.github.com/repos/googifloop/googifloop.github.io/commits?path=${fp}&per_page=1`)
+        .then(res => res.json())
+        .then(data => {
+            if (data[0]) {
+                commitElement.innerHTML = `[ commit <a href="${data[0].html_url}" target="_blank" style="color:inherit;">${data[0].sha.slice(0,7)}</a> ]`;
+            }
+        })
+        .catch(() => commitElement.innerText = "can't load commit ;_;");
+}
+
+function tryUpdate() {
+    if (document.getElementById('commit')) {
+        updLogCommit();
+    } else {
+        let attempts = 0;
+        const interval = setInterval(() => {
+            attempts++;
+            if (document.getElementById('commit')) {
+                updLogCommit();
+                clearInterval(interval);
+            } else if (attempts > 10) {
+                clearInterval(interval);
+                console.log("fuck ts bruh");
+            }
+        }, 100);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", tryUpdate);
+
+if (window.swup) {
+    swup.hooks.on('page:view', tryUpdate);
 }
