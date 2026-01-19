@@ -33,31 +33,39 @@
 
 <script>
     const muteButton = document.getElementById("muteButton");
-    
-    if (typeof(Storage) === "undefined") {
+
+    if (!localStorage.getItem("soundsOn")) {
         localStorage.setItem("soundsOn", "muted");
-        muteButton.src = "/resources/img/main/muteButtonmuted.png"
     }
 
     function toggleSound() {
-        if (localStorage.soundsOn === "unmuted") {
+        let currentState = localStorage.getItem("soundsOn");
+
+        if (currentState === "unmuted") {
             localStorage.setItem("soundsOn", "muted");
-            muteButton.src = "/resources/img/main/muteButtonmuted.png"
+            if (typeof track !== 'undefined') track.pause();
+            document.body.classList.add('is-muted');
         } else {
             localStorage.setItem("soundsOn", "unmuted");
-            muteButton.src = "/resources/img/main/muteButton.png"
+            if (typeof track !== 'undefined') track.play();
+            document.body.classList.remove('is-muted');
         }
+        
+        updateGraphics();
     }
 
     function updateGraphics() {
-        if (localStorage.soundsOn === "muted") {
-            muteButton.src = "/resources/img/main/muteButtonmuted.png"
+        const state = localStorage.getItem("soundsOn");
+        if (state === "muted") {
+            muteButton.src = "/resources/img/main/muteButtonmuted.png";
+            document.body.classList.add('is-muted');
         } else {
-            muteButton.src = "/resources/img/main/muteButton.png"
+            muteButton.src = "/resources/img/main/muteButton.png";
+            document.body.classList.remove('is-muted');
         }
     }
 
-    updateGraphics()
+    updateGraphics();
 </script>
 
 <!-- Really important script!(s) -->

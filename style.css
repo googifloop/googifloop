@@ -301,15 +301,6 @@ a {
 	}
 }
 
-@keyframes infinitetile {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -10rem -10rem;
-	}
-}
-
 @keyframes shake {
 	0% { transform: translate(.4px, .4px) rotate(0deg); }
 	10% { transform: translate(-.4px, -.4px) rotate(-.4deg); }
