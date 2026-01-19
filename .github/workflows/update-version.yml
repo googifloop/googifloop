@@ -1,0 +1,24 @@
+name: Update Version File
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Write commit hash to version.txt
+        run: |
+          echo "Bop: $(git rev-parse --short HEAD) ($(date +'%m/%d/%Y'))" > version.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add version.txt
+          git commit -m "chore: update version.txt [skip ci]" || exit 0
+          git push
