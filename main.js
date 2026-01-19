@@ -102,27 +102,3 @@ $(function(){
 function show(param_div_id) {
     document.getElementById('columnR').innerHTML = document.getElementById(param_div_id).innerHTML;
 }
-
-function updLogCommit() {
-    const commitElement = document.getElementById('commit');
-    if (!commitElement) return;
-    
-    fetch('/version.txt?t=' + Date.now())
-        .then(res => {
-            if (!res.ok) throw new Error("version txt not founddd EUUUUUGUGGGHHHH");
-            return res.text();
-        })
-        .then(text => {
-            commitElement.innerText = text.trim();
-        })
-        .catch((err) => {
-            console.error(err);
-            commitElement.innerText = "can't load commit ;_;";
-        });
-}
-
-document.addEventListener("DOMContentLoaded", updLogCommit);
-
-if (window.swup) {
-    swup.hooks.on('page:view', updLogCommit);
-}
