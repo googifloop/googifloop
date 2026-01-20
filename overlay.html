@@ -87,11 +87,11 @@
                 return res.text();
             })
             .then(text => {
-                commitElement.innerText = text.trim();
+                commitElement.innerHTML = text.trim();
             })
             .catch((err) => {
                 console.error(err);
-                commitElement.innerText = "can't load commit ;_;";
+                commitElement.innerHTML = "can't load commit ;_;";
             });
     }
 
