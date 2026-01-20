@@ -11,9 +11,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Write commit hash to version.txt
+      - name: write ver to version.txt and COMMIT link to link2commit.txt
         run: |
-          echo "commit $(git rev-parse --short HEAD) ($(date +'%m/%d/%Y'))" > version.txt
+          echo "commit <a href='https://github.com{{ github.repository }}/commit/${{ github.sha }}'>$(git rev-parse --short HEAD)</a> ($(date +'%m/%d/%Y'))" > version.txt
 
       - name: Commit and push changes
         run: |
