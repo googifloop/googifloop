@@ -1,7 +1,23 @@
 /* music section i think */
 
-.row {
+.albums {
+    width: 100%;
     display: flex;
+    overflow-x: scroll;
+    border-radius: 0.3rem;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+}
+
+.players iframe {
+    background: rgba(25, 34, 71, 0.3);
+    background-image: url('/resources/img/main/loaderRun.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10rem;
 }
 
 .albumCoverImg {
@@ -10,27 +26,6 @@
     margin: 0.1rem;
     border-radius: 0.3rem;
     object-fit: cover;
-}
-
-.column {
-    float: left;
-    padding: 10px;
-}
-
-.columnL {
-    flex: 30%
-}
-
-.columnR {
-    flex: 70%
-}
-
-.columnR iframe {
-    background: rgba(25, 34, 71, 0.3);
-    background-image: url('/resources/img/main/loaderRun.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10rem;
 }
 
 /* OC section */
