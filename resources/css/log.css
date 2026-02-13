@@ -26,6 +26,7 @@
 .log1 * { color: inherit; text-align: left; }
 
 .log2 {
+	color: black;
 	font-family: serif;
 	padding: 1rem;
     margin: 1rem 0;

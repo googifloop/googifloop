@@ -2,6 +2,9 @@ body {
     background-image: none;
     background-color: #6B5B31;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
 
 .hslFun {
@@ -16,11 +19,12 @@ body {
 
     pointer-events: none;
     height: 80vh; 
-    width: 100vw;
+    width: 125%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .doll {
@@ -42,11 +46,11 @@ body {
         opacity: 1;
     }
     90% {
-        transform: translateX(-40vw);
+        transform: translateX(-450px);
         opacity: 1;
     }
     100% {
-        transform: translateX(-45vw);
+        transform: translateX(-700px);
         opacity: 0;
     }
 }
@@ -57,7 +61,7 @@ body {
 
     position: fixed;
     left: 50%;
-    
+
     height: 100vmax;
     width: 100vmax;
     
