@@ -2,19 +2,16 @@
 
 .navBarMain {
     position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(50% - 6rem);
+    left: 3.5rem;
 
-    width: 80%;
-    max-width: 70rem;
-    height: 3.5rem;
-    border-radius: 2rem;
+    width: 1rem;
+    height: 12rem;
 
-    border: 0.1rem solid rgba(255,255,255,0.3);
-	box-shadow: 0 0.3rem 1rem 0 rgba(31, 38, 135, 0.3);
-	background: rgba(255,255,255,0.7);
-	backdrop-filter: blur(2px);
+    border-image: url("/resources/img/main/9sliceborder.gif") 40 40 40 40 fill / 20px 20px 20px 20px;
+padding: 30px 30px 30px 30px;
+
+    background-color: black;
 
     z-index: 42424;
     padding: 0 1.5rem;
@@ -25,49 +22,38 @@
     animation-fill-mode: forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-	.navBarMain {
-        border: 0.1rem solid rgba(93, 92, 136, 0.459);
-		box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.3);
-		background: rgba(0,0,0,0.4);
-    }
-}
-
 .navBarFlex {
     display: flex;
+    flex-direction: column;
     margin: 0 0.5rem;
     width: auto;
     height: 100%;
     align-items: center;
-    gap: 0.25rem;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
 .navbutton {
-    font-family: 'Nunito', sans-serif;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    gap: 0.25rem;
-    color: #1a2247;
-    filter: drop-shadow(0 0.1rem 0.05rem rgba(0,0,0,0.5));
     text-decoration: none;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-	.navbutton {
-		color: #f1f3ff;
-	}
+.navButton p::after {
+    content: " ";
+    /* THIS IS AN EN QUAD
+    ITS REALLY IMPORTANT
+    SO IT LOOKS GOOD
+    DO NOT DELETE
+    FATTY */
 }
 
-.navTxt {
-    display: inline-block;
+.navButton:hover {
+    transform: scale(1.2);
 }
-
-.bigasslogo {
-    margin-right: auto;
+.navbutton p {
+    line-height: 0.25;
 }
-
 .footer {
     pointer-events: none;
     position: fixed;
@@ -88,48 +74,16 @@
 
 #commit {
     position: fixed;
-    padding: 10px;
+    padding: 12px;
     right: 1rem;
     bottom: 0rem;
-    background-color: rgba(50, 51, 63, 0.4);
-    backdrop-filter: blur(4px);
-    border: 0.1rem solid rgba(255,255,255,0.3);
-	box-shadow: 0 0.3rem 1rem 0 rgba(31, 38, 135, 0.3);
-	border-radius: 0.5rem;
+    border-image: url("/resources/img/main/9sliceborder.gif") 40 40 40 40 fill / 20px 20px 20px 20px;
+    background: black;
 	color: white;
-	text-shadow: 0 0.1rem 0.25rem rgba(26, 34, 71, 0.4);
 	text-align: right;
 	font-size: rem;
 	line-height: 0.9;
     font-size: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-	#commit {
-        background-color: rgba(50, 51, 63, 0.8);
-        font-size: 1rem;
-    }
-
-    #commit a {
-        color: #ce8093;
-    }
-}
-
-
-/* USEFUL FORMULA */
-/* window.innerWidth / parseFloat(getComputedStyle(document.documentElement).fontSize) */
-@media only screen and (max-width: 48rem) {
-    .navbarFlex {
-        justify-content: space-evenly;
-    }
-    .bigasslogo {
-        display: none;
-    }
-}
-@media only screen and (max-width: 24rem) {
-    .navTxt {
-        display: none;
-    }
 }
 
 .navbutton img {

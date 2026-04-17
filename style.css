@@ -1,6 +1,7 @@
 /* Hey. i see you looking through my css shit. Do not look through this and expect anything good i am a shit coder and i weep every night dreaming about that perfect site that uuhhh fucking soragpt generated in 2 seconds */
-@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css");
 /* ^^^ ignore that im shoving css into one file because its good */
 :root {
 	interpolate-size: allow-keywords;
@@ -8,29 +9,22 @@
 }
 
 body {
-	color: #1a2247;
-	background-image: url("resources/img/main/googifloopBG.png");
+	color: white;
+	background-color: black;
 	margin: 1.25rem;
-	margin-top: 4rem;
-	font-family: "Nunito", sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		color: #f1f3ff;
-		background-image: url("resources/img/main/googifloopBG-dark.png");
-	}
+	font-family: "Rubik Dirt", sans-serif;
 }
 
 html::-webkit-scrollbar {
 	display: none;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 /* WE ARE CHARLIE KIRRRRKKKKKKKK WE CARRY THE FLAMEE
 hi jolly ggoogifloop here */
 
-h1, h2 {
+h1,
+h2 {
 	color: inherit;
 	text-shadow: 0 0.1rem 0.25rem rgba(26, 34, 71, 0.4);
 	text-align: center;
@@ -39,24 +33,20 @@ h1, h2 {
 	line-height: 0.9;
 }
 
-@media (prefers-color-scheme: dark) {
-	h1,h2 {
-		text-shadow: 0 0.1rem 0.25rem rgba(11, 15, 32, 0.4);
-	}
-}
-
 h2 {
 	font-size: 1.5rem;
 }
 
-p, i {
+p,
+i {
 	color: inherit;
 	text-align: center;
 	font-size: 1.25rem;
 	line-height: 0.9;
 }
 
-sub, sup {
+sub,
+sup {
 	margin: auto;
 	text-align: center;
 	font-size: 1rem;
@@ -101,35 +91,27 @@ a {
 	}
 }
 
-.alignLeft, .alignLeft h2, .alignLeft p, .alignLeft li {
+.alignLeft,
+.alignLeft h2,
+.alignLeft p,
+.alignLeft li {
 	text-align: left;
 }
 
 /* classes and stuff. Yawwnnn */
 
-.main, .toc, .infoBox, .basicInfoTbl, .quoteBox, .warning {
-	max-width: 31.25rem;
-	max-height: auto;
+.main,
+.toc,
+.infoBox,
+.basicInfoTbl,
+.quoteBox,
+.warning {
 	margin: auto;
-	padding: 2rem;
-	border: 0.1rem solid rgba(255,255,255,0.3);
-	box-shadow: 0 0.3rem 1rem 0 rgba(31, 38, 135, 0.3);
-	background: rgba(255,255,255,0.4);
-	backdrop-filter: blur(4px);
-	
-	border-radius: 1rem;
+	max-width: 31.25rem;
+	padding: 2rem 1rem;
+	border-image: url("/resources/img/main/9sliceborder.gif") 40 40 40 40 fill / 20px 20px 20px 20px;
+	background: black;
 	overflow: hidden;
-
-	animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-	opacity: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-	.main, .toc, .infoBox, .basicInfoTbl, .quoteBox, .warning {
-		border: 0.1rem solid rgba(93, 92, 136, 0.459);
-		box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.3);
-		background: rgba(0,0,0,0.4);
-	}
 }
 
 .main * {
@@ -140,7 +122,7 @@ a {
 
 .mainCharPage {
 	margin: auto;
-    max-width: 60rem;
+	max-width: 60rem;
 	animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 	opacity: 0;
 }
@@ -179,7 +161,7 @@ a {
 	max-width: 16em;
 	margin: 1rem;
 	padding: 1rem;
-	
+
 	transform: translateY(-1rem);
 	float: right;
 	clear: right;
@@ -250,13 +232,16 @@ a {
 	object-fit: cover;
 }
 
-#overview, #appearance, #personality, #trivia, #gallery, #extras {
+#overview,
+#appearance,
+#personality,
+#trivia,
+#gallery,
+#extras {
 	scroll-margin-top: 2rem;
 }
-
 /* oc gallery stuff */
 /* I should mention literally everything in here is unorthodox ok but it works */
-
 
 /* credits page */
 
@@ -275,17 +260,18 @@ a {
 	0% {
 		opacity: 0;
 		transform: translateY(-10px);
-		filter:blur(10px);
+		filter: blur(10px);
 	}
 	100% {
 		opacity: 1;
 		transform: translateY(0);
-		filter:blur(0px);
+		filter: blur(0px);
 	}
 }
 
 @keyframes wave {
-	0%, 100% {
+	0%,
+	100% {
 		transform: translateY(0);
 	}
 	50% {
@@ -295,7 +281,7 @@ a {
 
 @keyframes rainbowText {
 	0% {
-		color: hsl(0, 70%, 60%)
+		color: hsl(0, 70%, 60%);
 	}
 	10% {
 		color: hsl(40, 70%, 60%);
@@ -330,55 +316,97 @@ a {
 }
 
 @keyframes shake {
-	0% { transform: translate(.4px, .4px) rotate(0deg); }
-	10% { transform: translate(-.4px, -.4px) rotate(-.4deg); }
-	20% { transform: translate(-.4px, 0px) rotate(.4deg); }
-	30% { transform: translate(.4px, .4px) rotate(0deg); }
-	40% { transform: translate(.4px, -.4px) rotate(.4deg); }
-	50% { transform: translate(-.4px, .4px) rotate(-.4deg); }
-	60% { transform: translate(-.4px, .4px) rotate(0deg); }
-	70% { transform: translate(.4px, .4px) rotate(-.4deg); }
-	80% { transform: translate(-.4px, -.4px) rotate(.4deg); }
-	90% { transform: translate(.4px, .4px) rotate(0deg); }
-	100% { transform: translate(.4px, -.4px) rotate(-.4deg); }
+	0% {
+		transform: translate(0.4px, 0.4px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-0.4px, -0.4px) rotate(-0.4deg);
+	}
+	20% {
+		transform: translate(-0.4px, 0px) rotate(0.4deg);
+	}
+	30% {
+		transform: translate(0.4px, 0.4px) rotate(0deg);
+	}
+	40% {
+		transform: translate(0.4px, -0.4px) rotate(0.4deg);
+	}
+	50% {
+		transform: translate(-0.4px, 0.4px) rotate(-0.4deg);
+	}
+	60% {
+		transform: translate(-0.4px, 0.4px) rotate(0deg);
+	}
+	70% {
+		transform: translate(0.4px, 0.4px) rotate(-0.4deg);
+	}
+	80% {
+		transform: translate(-0.4px, -0.4px) rotate(0.4deg);
+	}
+	90% {
+		transform: translate(0.4px, 0.4px) rotate(0deg);
+	}
+	100% {
+		transform: translate(0.4px, -0.4px) rotate(-0.4deg);
+	}
 }
 
 @keyframes shakeIntense {
-	0% { transform: translate(1px, 1px) rotate(0deg); }
-	10% { transform: translate(-1px, -1px) rotate(-1deg); }
-	20% { transform: translate(-1px, 0px) rotate(1deg); }
-	30% { transform: translate(1px, 1px) rotate(0deg); }
-	40% { transform: translate(1px, -1px) rotate(1deg); }
-	50% { transform: translate(1px, 1px) rotate(-1deg); }
-	60% { transform: translate(1px, 1px) rotate(0deg); }
-	70% { transform: translate(1px, 1px) rotate(-1deg); }
-	80% { transform: translate(-1px, -1px) rotate(1deg); }
-	90% { transform: translate(1px, 1px) rotate(0deg); }
-	100% { transform: translate(1px, -1px) rotate(-1deg); }
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -1px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-1px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(1px, 1px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(1px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -1px) rotate(-1deg);
+	}
 }
 
 @keyframes revealUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-        filter: blur(5px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
-    }
+	from {
+		opacity: 0;
+		transform: translateY(20px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
 }
 
 @keyframes revealUpLinear {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .transition-slide {
@@ -397,7 +425,6 @@ html.is-animating .transition-slide {
 html.is-leaving .transition-slide {
 	transform: translateY(0.5em) scale(0.98);
 }
-
 
 html.is-animating.to-left .transition-slide {
 	opacity: 0;
