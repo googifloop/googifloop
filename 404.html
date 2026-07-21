@@ -1,123 +1,44 @@
 <html>
-    <head>
-        <title>not found :C</title>
-		<link rel="stylesheet" href="/style.css">
-		<link rel="stylesheet" href="/resources/css/404.css">
-        <link rel="icon" type="image/x-icon" href="/resources/img/main/favicon.png">     
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-		<script src="https://unpkg.com/swup@4"></script>
-		<script src="https://unpkg.com/@swup/head-plugin@2"></script>
-		<script src="https://unpkg.com/@swup/scripts-plugin@2"></script>
-		<script>
-			const swup = new Swup({
-				plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin({head: false, body: true})]
-			});
-		</script>
-		<script src="/main.js"></script>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>无信号</title>
 
-        <!-- fun metadata stuff -->
-        <meta name="description" content="sora's super swag website!">
-
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://googifloop.mov/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="googifloop SITE!">
-        <meta property="og:description" content="sora's super swag website!">
-        <meta property="og:image" content="/resources/img/main/PREVIEWPIC.png">
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta property="twitter:domain" content="googifloop.mov">
-        <meta property="twitter:url" content="https://googifloop.mov/">
-        <meta name="twitter:title" content="googifloop SITE!">
-        <meta name="twitter:description" content="sora's super swag website!">
-        <meta name="twitter:image" content="/resources/img/main/PREVIEWPIC.png">
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="icon" href="favicon.ico" />
 	</head>
 
 	<body>
-        <div class="transition-slide" id="swup">
-            <div class="bar top"></div>
-            <div class="bar bot"></div>
-            <div class="kuru"></div>
-            <div class="spiral"></div>
-            <div id="sowuhLoopContainer"></div>
-            <p class="nfTxt">
-                <span style="--i:1">n</span>
-                <span style="--i:2">o</span>
-                <span style="--i:3">t</span>
-                <span style="--i:4"> </span>
-                <span style="--i:5">f</span>
-                <span style="--i:6">o</span>
-                <span style="--i:7">u</span>
-                <span style="--i:8">n</span>
-                <span style="--i:9">d</span>
-            </p>
-
-            <script>
-                const track = new Howl({
-                    src: ['/resources/audio/404.mp3'],
-                    loop: true,
-                    autoplay: false,
-                    volume: 0.3
-                });
-
-                const gifList = [
-                    '/resources/img/404/loaderRun.gif',
-                    '/resources/img/404/sora mc thumby thing.png',
-                    '/resources/img/404/loaderThumby.png',
-                    '/resources/img/404/sowa cool.png'
-                ];
-
-                let gifIndex = 0;
-                let count = 0;
-                const beatInterval = (60 / 162) * 1000;
-
-                function spawn() {
-                    const container = document.getElementById('sowuhLoopContainer');
-                    const img = document.createElement('img');
-                    
-                    img.src = gifList[gifIndex] + "?t=" + Date.now();
-                    img.className = 'doll';
-                    container.appendChild(img);
-
-                    count++;
-                    
-                    if (count >= 4) {
-                        count = 0;
-                        gifIndex = (gifIndex + 1) % gifList.length;
-                    }
-
-                    setTimeout(() => {
-                        img.remove();
-                    }, 5000); 
-                }
-
-                function loopTheRooms() {
-                    if (localStorage.soundsOn === "unmuted") {
-                        track.volume(0);
-                        track.play();
-                        track.fade(0, 0.3, 2000);
-                    }
-                    
-                    setInterval(() => {
-                        spawn();
-                    }, beatInterval);
-                }
-
-                loopTheRooms();
-
-                swup.hooks.on('visit:start', () => {
-                    if (typeof track !== 'undefined' && track.playing()) {
-                        track.fade(track.volume(), 0, 500); 
-            
-                        setTimeout(() => {
-                            track.stop();
-                            track.volume(0.3); 
-                        }, 500);
-                    }
-                });
-            </script>
-        </div>
+		<div
+			style="
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				flex-direction: column;
+			"
+		>
+			<span style="font-size: 5rem; color: white; animation: shakei 1s step-end infinite;">无信号</span>
+		</div>
 	</body>
+
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        @keyframes shakei {
+            0% { transform: translate(.4px, .4px) rotate(0deg); }
+            10% { transform: translate(-.4px, -.4px) rotate(-.4deg); }
+            20% { transform: translate(-.4px, 0px) rotate(.4deg); }
+            30% { transform: translate(.4px, .4px) rotate(0deg); }
+            40% { transform: translate(.4px, -.4px) rotate(.4deg); }
+            50% { transform: translate(-.4px, .4px) rotate(-.4deg); }
+            60% { transform: translate(-.4px, .4px) rotate(0deg); }
+            70% { transform: translate(.4px, .4px) rotate(-.4deg); }
+            80% { transform: translate(-.4px, -.4px) rotate(.4deg); }
+            90% { transform: translate(.4px, .4px) rotate(0deg); }
+            100% { transform: translate(.4px, -.4px) rotate(-.4deg); }
+        }
+    </style>
 </html>
